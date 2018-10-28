@@ -12,20 +12,13 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="https://cdn.bootcss.com/popper.js/1.14.4/esm/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>
-    $('a[href*=#]').click(function(event) {
-        // 此处正则用于转换带页面URL的锚点，如 http://abc.html#div,具体正则格式据实际情况而定
-        var targetId = $(this).attr('href').replace(/\w+.html/,'');
-        $("html,body").animate({scrollTop: $(targetId).offset().top}, 1000);
-    });
-</script>
+		<script>$.fn.smoothScroll=function(){$('html, body').animate({'scrollTop':this.offset().top},'slow','swing')};</script>
 	</head>
 
 	<body>
-	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
-				<a class="navbar-brand"><img src="img/logo.png" id="logo_img"></a>
+				<span class="navbar-brand"><img src="img/logo2.png" id="logo_img"></span>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -35,9 +28,9 @@
 							<a href="#" class="nav-link active">首页</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a href="#works" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
+							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">平面设计</a>
+								<a class="dropdown-item" href="#" onclick="$('#graphicdesign').smoothScroll();">平面设计</a>
 								<a class="dropdown-item" href="#">C4D</a>
 								<a class="dropdown-item" href="#">Logo</a>
 							</div>
@@ -52,7 +45,6 @@
 				</div>
 			</div>
 		</nav>
-	</div>
 		<div id="slides" class="carousel slide" data-ride="carousel">
 			<ul class="carousel-indicators">
 				<li data-target="slides" data-slide-to="0" class="active"></li>
@@ -61,13 +53,7 @@
 			</ul>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="img/slide_blank.png" />
-					<div class="carousel-caption">
-						<h1 class="display-1">Hi. I'm Chris.</h1>
-						<h3>Welcome to my website.</h3>
-						<br />
-						<!--<button type="button" class="btn btn-outline-light btn-lg">View</button>-->
-					</div>
+					<img src="img/slide1.png" />
 				</div>
 				<div class="carousel-item">
 					<img src="img/slide2.png" />
@@ -88,45 +74,43 @@
 		<div class="container-fluid">
 			<div class="row jumbotron">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-10">
-					<!--<h1 class="display-4">你好，我叫王腾达</h1>-->
-					<h2 class="display-5">Hi, my name is Chris Wong</h2>
+					<p>你好，我叫王腾达</p>
+					<p>Hi, my name is Chris Wong.</p>
+					<br />
 					<p>一个在学的平面设计师，21岁，是个学生</p>
-					<p class="lead">a learning graphic designer, 21, still a student.</p>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-					<a href="#"><button type="button" class="btn btn-outline-primary btn-lg">社交账户</button></a>
+					<p>a learning graphic designer, 21, still a student.</p>
 				</div>
 			</div>
 		</div>
 		<hr class="my-4" />
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4">
 					<div class="card">
 						<img class="card-img-top" src="img/graphic-design.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">平面设计</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<p class="card-text">大概从2014年开始学习使用Photoshop，然后开始了自学平面设计的道路</p>
 							<a href="#" class="btn btn-primary">看一看</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4">
 					<div class="card">
 						<img class="card-img-top" src="img/3d_design.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">C4D设计</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<p class="card-text">2017年年初接触到C4D这一神奇的三维软件，上手成本低，很适合平面设计师学习使用</p>
 							<a href="#" class="btn btn-primary">看一看</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4">
 					<div class="card">
 						<img class="card-img-top" src="img/logo_design.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">Logo设计</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<p class="card-text">这里面的logo大部分都是爱好设计，较少部分投入了使用</p>
 							<a href="#" class="btn btn-primary">看一看</a>
 						</div>
 					</div>
@@ -134,9 +118,21 @@
 			</div>
 		</div>
 		<hr class="my-4" />
-		<div class="container-fluid">
-			<h2 id="works"></h2>
+		<div class="container" id="graphicdesign">
+			<h2>平面设计</h2>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="img/ps/1989adjusted.jpg" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/ps/404.png" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/ps/glitch art.jpg" />
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
-
 </html>
