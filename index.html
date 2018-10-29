@@ -28,16 +28,16 @@
 						<li class="nav-item">
 							<a href="#" class="nav-link active">首页</a>
 						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link" onclick="$('#introduce_myself').smoothScroll();">关于我</a>
+						</li>
 						<li class="nav-item dropdown">
 							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#" onclick="$('#graphicdesign').smoothScroll();">平面设计</a>
-								<a class="dropdown-item" href="#" onclick="$('#c4d_design').smoothScroll();">C4D</a>
+								<a class="dropdown-item" href="#" onclick="$('#hr_graphicDesign').smoothScroll();">平面设计</a>
+								<a class="dropdown-item" href="#" onclick="$('#hr_C4Ddesign').smoothScroll();">C4D</a>
 								<a class="dropdown-item" href="#">Logo</a>
 							</div>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">关于我</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">社交账户</a>
@@ -75,9 +75,9 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
-		<div class="container-fluid">
+		<div class="container-fluid" id="introduce_myself">
 			<div class="row jumbotron">
-				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-10">
+				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-10" >
 					<p>你好，我叫王腾达</p>
 					<p>Hi, my name is Chris Wong.</p>
 					<br />
@@ -95,7 +95,7 @@
 						<div class="card-body">
 							<h5 class="card-title">平面设计</h5>
 							<p class="card-text">大概从2014年开始学习使用Photoshop，然后开始了自学平面设计的道路</p>
-							<a href="#graphicdesign" class="btn btn-primary" onclick="$('#graphicdesign').smoothScroll();">看一看</a>
+							<a href="#graphicdesign" class="btn btn-primary" onclick="$('#hr_graphicDesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -105,7 +105,7 @@
 						<div class="card-body">
 							<h5 class="card-title">C4D设计</h5>
 							<p class="card-text">2017年年初接触到C4D这一神奇的三维软件，上手成本低，很适合平面设计师学习使用</p>
-							<a href="#c4d_design" class="btn btn-primary" onclick="$('#c4d_design').smoothScroll();">看一看</a>
+							<a href="#c4d_design" class="btn btn-primary" onclick="$('#hr_C4Ddesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 				</div>
 			</div>
 		</div>
-		<hr class="my-4" />
+		<hr class="my-4" id="hr_graphicDesign"/>
 		<div class="container" id="graphicdesign">
 			<h2 class="design_title">平面设计</h2>
 			<hr />
@@ -152,7 +152,7 @@
 				</div>
 			</div>
 		</div>
-		<hr class="my-4" />
+		<hr class="my-4" id="hr_C4Ddesign"/>
 		<div class="container" id="c4d_design">
 			<h2 class="design_title">C4D设计</h2>
 			<hr />
