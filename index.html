@@ -13,7 +13,9 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="https://cdn.bootcss.com/popper.js/1.14.4/esm/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>$.fn.smoothScroll=function(){$('html, body').animate({'scrollTop':this.offset().top},'slow','swing')};</script>
+		<script>
+			$.fn.smoothScroll=function(){$('html, body').animate({'scrollTop':this.offset().top},'slow','swing')};
+		</script>
 	</head>
 
 	<body>
@@ -38,11 +40,11 @@
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#" onclick="$('#hr_graphicDesign').smoothScroll();">平面设计</a>
 								<a class="dropdown-item" href="#" onclick="$('#hr_C4Ddesign').smoothScroll();">C4D</a>
-								<a class="dropdown-item" href="#">Logo</a>
+								<a class="dropdown-item" href="#" onclick="$('#LogoDesign').smoothScroll();">Logo</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">社交账户</a>
+							<a href="#" class="nav-link" onclick="$('#socialMedia').smoothScroll();">社交账户</a>
 						</li>
 					</ul>
 				</div>
@@ -80,6 +82,8 @@
 		<div class="container-fluid" id="introduce_myself">
 			<div class="row jumbotron">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-10" >
+					<h1>关于我</h1>
+					<br />
 					<p>你好，我叫王腾达</p>
 					<p>Hi, my name is Chris Wong.</p>
 					<br />
@@ -87,6 +91,9 @@
 					<p>a learning graphic designer, 21, still a student.</p>
 				</div>
 			</div>
+		</div>
+		<hr class="my-4" />
+		<div id="fixed-div">
 		</div>
 		<hr class="my-4" id="cards" />
 		<div class="container-fluid">
@@ -110,14 +117,14 @@
 							<a href="#c4d_design" class="btn btn-primary" onclick="$('#hr_C4Ddesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
-				</div>
+				</div>				
 				<div class="col-md-4 col-sm-4">
 					<div class="card">
 						<img class="card-img-top" src="img/logo/logo_design.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">Logo设计</h5>
 							<p class="card-text">这里面的logo大部分都是爱好设计，较少部分投入了使用</p>
-							<a href="#" class="btn btn-primary">看一看</a>
+							<a href="#" class="btn btn-primary" onclick="$('#LogoDesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -180,6 +187,53 @@
 						<img src="img/3d/积木 20.png" />
 					</div>
 				</div>
+			</div>
+		</div>
+		<hr class="my-4" />
+		<div class="container" id="LogoDesign">
+			<h2 class="design_title">LOGO设计</h2>
+			<hr />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="img/logo_design/ec.png" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/logo_design/Pineapple.png" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/logo_design/softcore.png" />
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="img/logo_design/unknown file.png" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/logo_design/妇女之家.png" />
+					</div>
+					<div class="col-md-4">
+						<img src="img/logo_design/盐鱼.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="my-4" />
+		<div class="container" id="socialMedia">
+			<h2 class="design_title">社交账户</h2>
+			<hr />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6" id="weibo">
+						<a href="https://weibo.com/u/2296646393?nick=ChrisWong-Designer"><img src="img/icon/weibo (1).png"><p>@ChrisWong-Designer</p></a>
+					</div>
+					<div class="col-md-6" id="ins">
+						<a href="https://www.instagram.com/chris_wong_97/"><img src="img/icon/ins.png"><p>@chris_wong_97</p></a>				
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</body>
