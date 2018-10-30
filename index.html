@@ -21,7 +21,7 @@
 					//根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
 					$('html,body').animate({
 						scrollTop: ($($(this).attr('href')).offset().top - 50)
-					}, 2000, 'easeInOutCubic');
+					}, 2000, 'easeInOutExpo');
 				});
 			});
 		</script>
@@ -40,20 +40,20 @@
 							<a href="#" class="nav-link active">首页</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link" onclick="$('#introduce_myself').smoothScroll();">关于我</a>
+							<a href="#introduce_myself" class="nav-link" <!--onclick="$('#introduce_myself').smoothScroll();"-->关于我</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-header" href="#" onclick="$('#cards').smoothScroll();">作品</a>
+								<a class="dropdown-header" href="#cards" onclick="$('#cards').smoothScroll();">作品</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#hr_graphicDesign" onclick="$('#hr_graphicDesign').smoothScroll();">平面设计</a>
-								<a class="dropdown-item" href="#" onclick="$('#hr_C4Ddesign').smoothScroll();">C4D</a>
-								<a class="dropdown-item" href="#" onclick="$('#LogoDesign').smoothScroll();">Logo</a>
+								<a class="dropdown-item" href="#hr_C4Ddesign" onclick="$('#hr_C4Ddesign').smoothScroll();">C4D</a>
+								<a class="dropdown-item" href="#LogoDesign" onclick="$('#LogoDesign').smoothScroll();">Logo</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link" onclick="$('#socialMedia').smoothScroll();">社交账户</a>
+							<a href="#socialMedia" class="nav-link" onclick="$('#socialMedia').smoothScroll();">社交账户</a>
 						</li>
 					</ul>
 				</div>
@@ -113,7 +113,7 @@
 						<div class="card-body">
 							<h5 class="card-title">平面设计</h5>
 							<p class="card-text">大概从2014年开始学习使用Photoshop，然后开始了自学平面设计的道路</p>
-							<a href="#graphicdesign" class="btn btn-primary" onclick="$('#hr_graphicDesign').smoothScroll();">看一看</a>
+							<a href="#hr_graphicDesign" class="btn btn-primary" onclick="$('#hr_graphicDesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -123,7 +123,7 @@
 						<div class="card-body">
 							<h5 class="card-title">C4D设计</h5>
 							<p class="card-text">2017年年初接触到C4D这一神奇的三维软件，上手成本低，很适合平面设计师学习使用</p>
-							<a href="#c4d_design" class="btn btn-primary" onclick="$('#hr_C4Ddesign').smoothScroll();">看一看</a>
+							<a href="#hr_C4Ddesign" class="btn btn-primary" onclick="$('#hr_C4Ddesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -133,7 +133,7 @@
 						<div class="card-body">
 							<h5 class="card-title">Logo设计</h5>
 							<p class="card-text">这里面的logo大部分都是爱好设计，较少部分投入了使用</p>
-							<a href="#" class="btn btn-primary" onclick="$('#LogoDesign').smoothScroll();">看一看</a>
+							<a href="#LogoDesign" class="btn btn-primary" onclick="$('#LogoDesign').smoothScroll();">看一看</a>
 						</div>
 					</div>
 				</div>
@@ -246,7 +246,6 @@
 						</a>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</body>
