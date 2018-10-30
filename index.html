@@ -25,7 +25,17 @@
 			});
 		</script>
 	</head>
+
 	<body>
+		<div class="loader">
+			<div id="box">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+		</div>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid navbar-header">
 				<span class="navbar-brand shake animated"><img src="img/logo/logo2.png" id="logo_img"></span>
@@ -38,7 +48,7 @@
 							<a href="#" class="nav-link active">首页</a>
 						</li>
 						<li class="nav-item">
-							<a href="#introduce_myself" class="nav-link" <!--onclick="$('#introduce_myself').smoothScroll();"-->关于我</a>
+							<a href="#introduce_myself" class="nav-link" <!--onclick="$('#introduce_myself').smoothScroll();" -->关于我</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
@@ -249,9 +259,23 @@
 						</a>
 					</div>
 				</div>
-				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>感谢您的观看</p>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>感谢您的观看</p>
 			</div>
 		</div>
+		<script>        
+//loading加载中
+//监听加载状态改变
+document.onreadystatechange = completeLoading;        
+   //加载状态为complete时移除loading效果
+   function completeLoading() {            
+   if (document.readyState == "complete") {
+          $("#loader").animate({                    
+              "opacity":"0"
+           },500).hide(1000);
+    }
+    }
+</script>
 	</body>
 
 </html>
