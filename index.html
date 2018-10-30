@@ -19,9 +19,9 @@
 			$(function() {
 				$('a').click(function() {
 					//根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
-					$('html,body').animate({
+					$('html,body,a:not([class="none_animate"])').animate({
 						scrollTop: ($($(this).attr('href')).offset().top - 50)
-					}, 2000, 'easeInOutExpo');
+					}, 3000, 'easeInOutExpo');
 				});
 			});
 		</script>
@@ -45,7 +45,7 @@
 						<li class="nav-item dropdown">
 							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作品</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-header" href="#cards" onclick="$('#cards').smoothScroll();">作品</a>
+								<a class="dropdown-header" href="#works" onclick="$('#cards').smoothScroll();">作品</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#hr_graphicDesign" onclick="$('#hr_graphicDesign').smoothScroll();">平面设计</a>
 								<a class="dropdown-item" href="#hr_C4Ddesign" onclick="$('#hr_C4Ddesign').smoothScroll();">C4D</a>
@@ -79,11 +79,11 @@
 					<img src="img/slide/slide3.png" id="slide3" />
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+			<a class="carousel-control-prev none_animate" href="#slides" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+			<a class="carousel-control-next none_animate" href="#slides" role="button" data-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
@@ -99,10 +99,15 @@
 					<p>一个在学的平面设计师，21岁，是个学生</p>
 					<p>a learning graphic designer, 21, still a student.</p>
 				</div>
+				<div id="profile_photo" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+					<img src="img/profile_photo.png" />
+					<img src="img/profile_photo2.png" />
+				</div>
 			</div>
 		</div>
 		<hr class="my-4" />
-		<div id="fixed-div">
+		<div id="works">
+			<h3 class="card-title">作品概览</h3>
 		</div>
 		<hr class="my-4" id="cards" />
 		<div class="container-fluid">
@@ -246,6 +251,7 @@
 						</a>
 					</div>
 				</div>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>感谢您的观看</p>
 			</div>
 		</div>
 	</body>
