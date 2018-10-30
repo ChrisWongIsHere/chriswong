@@ -28,6 +28,11 @@ body {
 	font: 1.1em !important;
 }
 
+.carousel button{
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+
 .carousel-inner img {
 	width: 100%;
 	height: 100%;
